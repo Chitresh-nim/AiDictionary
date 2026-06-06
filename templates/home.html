@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block title %} Dictionary {% endblock%}
+
+{% block body %}
+
+    <div class="container">
+      <div class="left-column">
+        <div class="flashleft">
+          {% with messages = get_flashed_messages(with_categories=true)%}
+          {% if messages %}
+            {% for category, message in messages %}
+                <p class="flash" id="homeflash">{{message}}</p>
+            {% endfor%}
+          {% endif %}
+          {% endwith%}
+
+             <button id="logoutbtn" type="button"> Logout </button>
+        </div>
+        <div class="input-box">
+        
+          <h3 id="head">AI DICT</h3>
+          <div class="search-wrapper">
+            <input id="wordInput" name="word" type="text" placeholder="Type your word..">
+            <button id="searchBtn"><img src="{{ url_for('static',filename='images/image.png') }}"></button>
+          </div>
+        <div class="line"></div>
+          
+        </div>
+      
+         <div class="info">
+              <h3 id="info-heading">Learned Words</h3>
+              <ul id="learnedWords"  class="word-list"></ul>
+             
+         </div>
+      </div>
+        <div class="right-panel">
+          <h2 id="result-heading">Result</h2>
+          <div id="spinner" class="spinner"></div>
+          <div id="resultBox" class="result-box">
+
+          </div>
+        </div>
+    </div>
+
+
+{% endblock %}
