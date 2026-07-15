@@ -1,4 +1,12 @@
 # AI Dictionary
+> *A Smart Dictionary App with AI-Generated Definitions* — Built with Flask, Google Gemini AI, and PostgreSQL
+
+[![Flask](https://img.shields.io/badge/Flask-3.0-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Gemini AI](https://img.shields.io/badge/Gemini_AI-Google-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
+[![Jinja](https://img.shields.io/badge/Jinja-2.0-B41717?style=for-the-badge&logo=jinja&logoColor=white)](https://jinja.palletsprojects.com/)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 An AI-powered dictionary web application built using Flask. Users can search for words, get AI-generated meanings and explanations, create accounts, and save learned words for future reference.
 
