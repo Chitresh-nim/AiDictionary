@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
-from openai import OpenAI
 import google.generativeai as genai
 import os
 import markdown
@@ -8,6 +7,10 @@ from form import RegisterForm, LoginForm
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import session
 import re
+from dotenv import load_dotenv
+import psycopg2
+
+load_dotenv()
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
@@ -16,7 +19,7 @@ app.config["SESSION_PERMANENT"] = False
 
 genai.configure(api_key= os.getenv("GOOGLE_API_KEY"))
 
-app.config["SQLALCHEMY_DATABASE_URI"]="postgresql://postgres:chit7126@localhost:5432/aidictionary"
+app.config["SQLALCHEMY_DATABASE_URI"]= os.getenv("DATABASE_URL")
 app.config["SQLALCHEMY_TRACK_MODIFICATION"]=False
 print(app.config["SQLALCHEMY_DATABASE_URI"])
 db = SQLAlchemy(app)
